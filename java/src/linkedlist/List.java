@@ -1,7 +1,9 @@
+package linkedlist;
+
 public class List {
     ListNode head;
     Integer size;
-    
+
     List() {
         this.head = null;
         this.size = 0;
@@ -69,26 +71,4 @@ public class List {
 
         myList.printList();
     }
-}
-
-class ListNode {
-    protected Integer value;
-    protected ListNode next;
-
-    ListNode(Integer value) {
-        this.value = value;
-        this.next = null;
-    }
-
-    public Integer getValue() {
-        return this.value;
-    }
-
-    public ListNode getNext() {
-        return this.next;
-    }
-
-    public void setNext(ListNode next) {
-        this.next = next;
-    }   
 }

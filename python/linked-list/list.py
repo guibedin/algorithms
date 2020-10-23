@@ -17,23 +17,26 @@ class List:
         self.head = None
         self.size = 0
 
-    def addNode(self, node):
+    def add_node(self, node):
         """
         Add a node at the start of the list
+
         Parameters
+        ----------
         node : ListNode
         """
         node.next = self.head
         self.head = node
         self.size += 1
     
-    def removeNode(self, value):
+    def remove_node(self, value):
         """
         Removes the node passed by parameter.
         If node was found, return node.value.
         If node is not found, return None.
         
         Parameters
+        ----------
         node : ListNode
         """
         tmp = self.head
@@ -58,7 +61,7 @@ class List:
         # Node not found
         return None
             
-    def printList(self):
+    def print_list(self):
         """
         Prints the list in current order.
         """
@@ -77,18 +80,22 @@ def main():
 
     # Add 10 elements to list
     for i in range(10):
-        my_list.addNode(ListNode(i))
+        my_list.add_node(ListNode(i))
     
-    my_list.printList()
+    my_list.print_list()
+    
     # Remove middle element
-    my_list.removeNode(5)
+    my_list.remove_node(5)
+    
     # Remove first element
-    my_list.removeNode(9)
+    my_list.remove_node(9)
+    
     # Remove last element
-    my_list.removeNode(0)
-    # Remove non-existing element
-    my_list.removeNode(10)
+    my_list.remove_node(0)
 
-    my_list.printList()
+    # Try to remove non-existing element
+    my_list.remove_node(10)
+
+    my_list.print_list()
 
 main()
