@@ -1,4 +1,4 @@
-package linkedlist;
+package datastructures.linkedlist;
 
 public class List {
     ListNode head;
@@ -41,6 +41,11 @@ public class List {
 
     public void printList() {
         ListNode cursor = this.head;
+
+        if(cursor == null) {
+            System.out.println("List is empty.");
+            return;
+        }
 
         System.out.println("List size: " + this.size);
         System.out.print("[");
