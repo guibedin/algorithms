@@ -1,23 +1,24 @@
 package datastructures.linkedlist;
 
-public class ListNode {
-    protected Integer value;
-    protected ListNode next;
+public class ListNode<T> {
 
-    ListNode(Integer value) {
+    protected T value;
+    protected ListNode<T> next;
+
+    public ListNode(T value) {
         this.value = value;
         this.next = null;
     }
 
-    public Integer getValue() {
+    public T getValue() {
         return this.value;
     }
 
-    public ListNode getNext() {
+    public ListNode<T> getNext() {
         return this.next;
     }
 
-    public void setNext(ListNode next) {
+    public void setNext(ListNode<T> next) {
         this.next = next;
     }
 }

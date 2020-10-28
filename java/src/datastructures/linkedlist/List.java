@@ -1,10 +1,10 @@
 package datastructures.linkedlist;
 
 public class List {
-    ListNode head;
-    Integer size;
+    protected ListNode head;
+    protected Integer size;
 
-    List() {
+    public List() {
         this.head = null;
         this.size = 0;
     }
@@ -64,7 +64,7 @@ public class List {
         List myList = new List();
 
         for(int i = 0; i < 10; i++) {
-            ListNode node = new ListNode(i);
+            ListNode<Integer> node = new ListNode<>(i);
             myList.addNode(node);
         }
         myList.printList();
